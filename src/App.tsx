@@ -121,7 +121,7 @@ const getInitialIndex = (answers: Answers) => {
   return firstUnanswered === -1 ? QUESTIONS.length - 1 : firstUnanswered
 }
 
-const createFeedback = (questionId: QuestionId, value: string, answers: Answers): Feedback => {
+const createFeedback = (questionId: QuestionId, value: string): Feedback => {
   switch (questionId) {
     case 'sweet_spending': {
       const level = Number(value)
@@ -427,7 +427,7 @@ const App = () => {
     const trimmed = value.trim()
     const updatedAnswers = { ...answers, [currentQuestion.id]: trimmed }
     setAnswers(updatedAnswers)
-    setCoachNote(createFeedback(currentQuestion.id, trimmed, updatedAnswers))
+    setCoachNote(createFeedback(currentQuestion.id, trimmed))
     moveToNext(updatedAnswers)
   }
 
@@ -724,7 +724,7 @@ const App = () => {
                               setAnswers(updatedAnswers)
                               
                               if (current.length > 0) {
-                                setCoachNote(createFeedback(currentQuestion.id, current.join(','), updatedAnswers))
+                                setCoachNote(createFeedback(currentQuestion.id, current.join(',')))
                               }
                             }}
                           />
