@@ -11,6 +11,11 @@ npm run dev
 
 Open the shown local URL (usually http://localhost:5173/) to try the questionnaire.
 
+## Deploy (GitHub Pages)
+- Base path is set to `/moo-H.github.io/` in `vite.config.ts`.
+- A GitHub Actions workflow builds and deploys `dist` to Pages on every push to `main`.
+- After the workflow finishes, the site is available at: https://nrok47.github.io/moo-H.github.io/
+
 ## Scripts
 - npm run dev – start Vite dev server
 - npm run build – type-check and build for production
