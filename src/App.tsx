@@ -171,15 +171,24 @@ const App = () => {
     detail: 'ตอบแต่ละข้อแล้วเราจะสะกิดพร้อมแผนปฏิบัติทันที',
     advice: 'ใช้เวลาคิดสั้น ๆ แล้วเลือกคำตอบที่ตรงใจที่สุด',
   }))
-    const [sliderDraft, setSliderDraft] = useState(() => loadAnswers().energy ?? '50')
+  const [sliderDraft, setSliderDraft] = useState(() => loadAnswers().energy ?? '50')
+  const [textDraft, setTextDraft] = useState('')
+
+  const currentQuestion = QUESTIONS[currentIndex]
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(answers))
   }, [answers])
 
-    useEffect(() => {
-      setSliderDraft(answers.energy ?? '50')
-    }, [answers.energy])
+  useEffect(() => {
+    setSliderDraft(answers.energy ?? '50')
+  }, [answers.energy])
+
+  useEffect(() => {
+    if (currentQuestion.type === 'text') {
+      setTextDraft(answers[currentQuestion.id] ?? '')
+    }
+  }, [currentQuestion.id, currentQuestion.type, answers])
 
   const completedCount = useMemo(
     () => QUESTIONS.filter((item) => answers[item.id]?.trim()).length,
@@ -187,7 +196,6 @@ const App = () => {
   )
 
   const progress = Math.round((completedCount / QUESTIONS.length) * 100)
-  const currentQuestion = QUESTIONS[currentIndex]
 
   const moveToNext = (updated: Answers) => {
     const nextIndex = QUESTIONS.findIndex((item) => !updated[item.id])
@@ -247,83 +255,94 @@ const App = () => {
 
       <main className="layout">
         <section className="card focus">
-          <div className="card-header">
-            <div>
-              <p className="eyebrow">ข้อ {currentIndex + 1} / {QUESTIONS.length}</p>
-              <h2>{currentQuestion.prompt}</h2>
-              <p className="helper">{currentQuestion.helper}</p>
+          <div className="question-anim" key={currentQuestion.id}>
+            <div className="card-header">
+              <div>
+                <p className="eyebrow">ข้อ {currentIndex + 1} / {QUESTIONS.length}</p>
+                <h2>{currentQuestion.prompt}</h2>
+                <p className="helper">{currentQuestion.helper}</p>
+              </div>
+              <div className="nav-actions">
+                <button className="ghost" onClick={handleBack} disabled={currentIndex === 0}>
+                  ย้อนกลับ
+                </button>
+                <button className="ghost" onClick={reset}>
+                  เริ่มใหม่
+                </button>
+              </div>
             </div>
-            <div className="nav-actions">
-              <button className="ghost" onClick={handleBack} disabled={currentIndex === 0}>
-                ย้อนกลับ
-              </button>
-              <button className="ghost" onClick={reset}>
-                เริ่มใหม่
-              </button>
-            </div>
-          </div>
 
-          <div className="input-area">
-            {currentQuestion.type === 'slider' && (
-              <div className="slider-group">
-                <input
-                  type="range"
-                  min={0}
-                  max={100}
-                  step={5}
-                  value={Number(sliderDraft)}
-                  onChange={(event) => setSliderDraft(event.target.value)}
-                />
-                <div className="slider-meta">
-                  <div className="slider-readout">
-                    <span>{sliderDraft}%</span>
-                    <span className="pill">{formatEnergyLabel(sliderDraft)}</span>
+            <div className="input-area">
+              {currentQuestion.type === 'slider' && (
+                <div className="slider-group">
+                  <input
+                    type="range"
+                    min={0}
+                    max={100}
+                    step={5}
+                    value={Number(sliderDraft)}
+                    onChange={(event) => setSliderDraft(event.target.value)}
+                  />
+                  <div className="slider-meta">
+                    <div className="slider-readout">
+                      <span>{sliderDraft}%</span>
+                      <span className="pill">{formatEnergyLabel(sliderDraft)}</span>
+                    </div>
+                    <button
+                      className="solid"
+                      onClick={() => handleAnswer(sliderDraft)}
+                      disabled={answers.energy === sliderDraft}
+                    >
+                      ยืนยัน
+                    </button>
                   </div>
-                  <button
-                    className="solid"
-                    onClick={() => handleAnswer(sliderDraft)}
-                    disabled={answers.energy === sliderDraft}
-                  >
-                    ยืนยัน
-                  </button>
                 </div>
-              </div>
-            )}
+              )}
 
-            {currentQuestion.type === 'chips' && (
-              <div className="chips">
-                {currentQuestion.options?.map((option) => (
-                  <button
-                    key={option}
-                    className={
-                      answers[currentQuestion.id] === option ? 'chip active' : 'chip'
-                    }
-                    onClick={() => handleAnswer(option)}
-                  >
-                    {option}
-                  </button>
-                ))}
-              </div>
-            )}
+              {currentQuestion.type === 'chips' && (
+                <div className="chips">
+                  {currentQuestion.options?.map((option) => (
+                    <button
+                      key={option}
+                      className={
+                        answers[currentQuestion.id] === option ? 'chip active' : 'chip'
+                      }
+                      onClick={() => handleAnswer(option)}
+                    >
+                      {option}
+                    </button>
+                  ))}
+                </div>
+              )}
 
-            {currentQuestion.type === 'text' && (
-              <div className="text-input">
-                <input
-                  type="text"
-                  placeholder="พิมพ์คำตอบสั้น ๆ"
-                  value={answers[currentQuestion.id] ?? ''}
-                  onChange={(event) => setAnswers({ ...answers, [currentQuestion.id]: event.target.value })}
-                  onBlur={(event) => handleAnswer(event.target.value)}
-                  onKeyDown={(event) => {
-                    if (event.key === 'Enter') {
-                      event.preventDefault()
-                      handleAnswer((event.target as HTMLInputElement).value)
-                    }
-                  }}
-                />
-                <p className="hint">กด Enter หรือคลิกนอกช่องเพื่อยืนยัน</p>
-              </div>
-            )}
+              {currentQuestion.type === 'text' && (
+                <div className="text-input">
+                  <input
+                    type="text"
+                    placeholder="พิมพ์คำตอบสั้น ๆ"
+                    value={textDraft}
+                    onChange={(event) => setTextDraft(event.target.value)}
+                    onBlur={(event) => handleAnswer(event.target.value)}
+                    onKeyDown={(event) => {
+                      if (event.key === 'Enter') {
+                        event.preventDefault()
+                        handleAnswer((event.target as HTMLInputElement).value)
+                      }
+                    }}
+                  />
+                  <div className="text-actions">
+                    <p className="hint">กด Enter หรือคลิกนอกช่องเพื่อยืนยัน</p>
+                    <button
+                      className="solid"
+                      onClick={() => handleAnswer(textDraft)}
+                      disabled={(textDraft.trim() || '') === (answers[currentQuestion.id]?.trim() ?? '')}
+                    >
+                      ตกลง
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
