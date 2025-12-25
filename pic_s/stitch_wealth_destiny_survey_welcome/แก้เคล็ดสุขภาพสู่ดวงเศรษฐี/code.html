@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>แก้เคล็ดสุขภาพสู่ดวงเศรษฐี</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans+Thai:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                        "gold-accent": "#D4AF37", // Added for the Thai theme
+                        "thai-red": "#8B0000", // Added for contrast
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans Thai", "sans-serif"],
+                        "body": ["Manrope", "Noto Sans Thai", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', 'Noto Sans Thai', sans-serif;
+        }
+        .thai-pattern-bg {
+            background-color: #f6f8f6;
+            background-image: radial-gradient(#D4AF37 0.5px, transparent 0.5px), radial-gradient(#D4AF37 0.5px, #f6f8f6 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111812] font-display min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<div class="w-full bg-white/90 backdrop-blur-sm sticky top-0 z-50 border-b border-[#f0f4f1]">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-10 py-3">
+<header class="flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-4 text-[#111812]">
+<div class="size-8 text-primary flex items-center justify-center rounded-full bg-background-dark">
+<span class="material-symbols-outlined text-xl">temple_buddhist</span>
+</div>
+<h2 class="text-[#111812] text-lg font-bold leading-tight tracking-[-0.015em]">แก้เคล็ดสุขภาพ</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex items-center gap-6">
+<a class="text-[#111812] text-sm font-medium hover:text-primary transition-colors" href="#">หน้าแรก</a>
+<a class="text-[#111812] text-sm font-medium hover:text-primary transition-colors" href="#">ทำนายดวง</a>
+<a class="text-[#111812] text-sm font-medium hover:text-primary transition-colors" href="#">บทความสุขภาพ</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-[#111812] text-sm font-bold shadow-md hover:bg-primary/90 transition-colors">
+<span class="truncate">เข้าสู่ระบบ</span>
+</button>
+</div>
+<button class="md:hidden text-[#111812]">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+</div>
+</div>
+<!-- Main Content Wrapper -->
+<main class="flex-grow flex flex-col items-center justify-start relative w-full overflow-hidden">
+<!-- Background Pattern -->
+<div class="absolute inset-0 thai-pattern-bg pointer-events-none z-0"></div>
+<!-- Prophecy Reveal Section (Hero) -->
+<section class="w-full max-w-[960px] px-4 py-8 z-10">
+<div class="flex flex-col items-center text-center mb-8 animate-fade-in-up">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-800 text-xs font-bold mb-4 border border-red-200">
+<span class="material-symbols-outlined text-sm">warning</span>
+                    คำเตือนจากสวรรค์
+                </div>
+<h1 class="text-3xl md:text-5xl font-black text-[#111812] mb-3 leading-tight">
+                    ผลทำนายดวงชะตาสุขภาพของคุณ
+                </h1>
+<p class="text-[#618968] text-lg max-w-2xl">
+                    เปิดคัมภีร์ดวงชะตาจากพฤติกรรมการกินและการใช้ชีวิตของคุณ...
+                </p>
+</div>
+<!-- Result Card -->
+<div class="bg-white rounded-xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border border-gray-100 overflow-hidden relative">
+<!-- Decorative Top Border -->
+<div class="h-2 w-full bg-gradient-to-r from-red-500 via-yellow-400 to-green-500"></div>
+<div class="flex flex-col md:flex-row">
+<!-- Image Side -->
+<div class="w-full md:w-1/2 relative min-h-[300px] md:min-h-[400px]">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Abstract mystical golden light representing hope and wealth" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUlUAGhIzcFEs73ixTMdNR_BeeKxp7m9MJUtxvyO_nc5ciILYpE0IYWfHbeu5o4J-LfIbkjXH4f133eT8_lPIJHQqTwEORx43_tJBB-zPFs3xnQ95eggOM-0sfVnJmUFMvsYqlfO7ksTShr8wtnlhQTxeClI-q7kPfZJNPBGu0z75Px9eo_d0q2uH-ocQyrgD8ND-ofEZvrp5365wHiiiMe2p3aclVSyllUgpUBhjIrDMf3wTfqp3HPzZnskyxhSU4zpGeuGJktjTl');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined fill-1">auto_awesome</span>
+<span class="text-sm font-bold uppercase tracking-wider">ดวงชะตาฟ้าลิขิต</span>
+</div>
+<p class="text-white text-2xl font-bold leading-snug drop-shadow-md">
+                                "ความมั่งคั่งรออยู่เบื้องหน้า หากท่านเปลี่ยนกายาให้แข็งแรง"
+                             </p>
+</div>
+</div>
+<!-- Content Side -->
+<div class="w-full md:w-1/2 p-8 flex flex-col justify-center bg-white relative">
+<!-- Watermark Icon -->
+<span class="material-symbols-outlined absolute top-4 right-4 text-gray-100 text-[120px] pointer-events-none select-none -rotate-12">
+                            health_and_safety
+                        </span>
+<div class="relative z-10">
+<h3 class="text-red-600 text-sm font-bold uppercase tracking-wide mb-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">dangerous</span>
+                                สิ่งที่ต้องระวัง
+                            </h3>
+<h2 class="text-[#111812] text-2xl md:text-3xl font-bold leading-tight mb-4">
+                                ดวงชะตามีเกณฑ์ <span class="text-red-600 bg-red-50 px-1 rounded">'เสียทรัพย์'</span> ก้อนโต!
+                            </h2>
+<p class="text-gray-600 mb-6 leading-relaxed">
+                                พฤติกรรมปัจจุบันส่งผลให้ธาตุไฟแตกซ่าน! ท่านมีเกณฑ์ต้องเสียเงินก้อนใหญ่ให้กับ 
+                                <strong>ค่ารักษาพยาบาล</strong> ในอนาคต หากไม่รีบแก้เคล็ดปรับพฤติกรรมตั้งแต่วันนี้
+                            </p>
+<div class="p-4 bg-green-50 rounded-lg border border-green-100 mb-8">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-700 mt-1">volunteer_activism</span>
+<div>
+<p class="text-green-800 font-bold text-sm mb-1">ทางแก้เคล็ด (Solution)</p>
+<p class="text-green-700 text-sm">
+                                            อยากเป็นเศรษฐีต้องเริ่มที่สุขภาพดี เปลี่ยนร้ายกลายเป็นดีด้วยเวชศาสตร์ชะลอวัย
+                                        </p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full h-14 bg-primary hover:bg-[#0fd630] text-[#111812] rounded-xl text-base font-bold shadow-lg shadow-green-200 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+<span>นัดหมายตรวจเช็กดวงสุขภาพ</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-xs text-gray-400">
+                                    ให้บริการโดย ศูนย์อนามัยที่ 10 อุบลราชธานี
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Section (Muketing Strategy) -->
+<section class="w-full py-12 bg-white relative">
+<div class="max-w-[960px] mx-auto px-4 md:px-10">
+<div class="text-center mb-10">
+<h2 class="text-[#111812] text-2xl md:text-3xl font-bold leading-tight mb-3">
+                        เคล็ดลับเสริมดวงสุขภาพ (Muketing Strategy)
+                    </h2>
+<p class="text-gray-600 text-base max-w-2xl mx-auto">
+                        บูชาสุขภาพดี ได้บารมีเศรษฐี ปรับสมดุลชีวิตตามหลักโภชนาการผสานคติความเชื่อ
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group flex flex-col rounded-xl border border-[#dbe6dd] bg-background-light p-6 hover:shadow-lg transition-all hover:border-primary/50 cursor-pointer">
+<div class="size-12 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-700 mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">restaurant_menu</span>
+</div>
+<h3 class="text-[#111812] text-lg font-bold mb-2">ลดหวาน ต้านมาร</h3>
+<p class="text-[#618968] text-sm leading-relaxed mb-4">
+                            การบริโภคหวานมากไปเปรียบดั่งการเชิญมารร้าย (เบาหวาน) เข้าสู่ร่างกาย ลดหวานวันนี้ ชีวิตมีสุข
+                        </p>
+<div class="mt-auto pt-4 border-t border-gray-200">
+<span class="text-xs font-bold text-primary uppercase tracking-wide">เสริมดวงชะตา +10</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col rounded-xl border border-[#dbe6dd] bg-background-light p-6 hover:shadow-lg transition-all hover:border-primary/50 cursor-pointer">
+<div class="size-12 rounded-full bg-red-100 flex items-center justify-center text-red-700 mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">directions_run</span>
+</div>
+<h3 class="text-[#111812] text-lg font-bold mb-2">ขยับกาย คลายกรรม</h3>
+<p class="text-[#618968] text-sm leading-relaxed mb-4">
+                            กรรมเก่าคือโรคภัย การออกกำลังกายคือการชดใช้กรรม ขับไล่สิ่งชั่วร้ายออกจากหลอดเลือด
+                        </p>
+<div class="mt-auto pt-4 border-t border-gray-200">
+<span class="text-xs font-bold text-primary uppercase tracking-wide">เสริมบารมี +15</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col rounded-xl border border-[#dbe6dd] bg-background-light p-6 hover:shadow-lg transition-all hover:border-primary/50 cursor-pointer">
+<div class="size-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">bedtime</span>
+</div>
+<h3 class="text-[#111812] text-lg font-bold mb-2">พักผ่อน รับโชค</h3>
+<p class="text-[#618968] text-sm leading-relaxed mb-4">
+                            การนอนหลับคือการเปิดรับพลังงานจักรวาล ฟื้นฟูธาตุในกายให้พร้อมรับโชคลาภในวันใหม่
+                        </p>
+<div class="mt-auto pt-4 border-t border-gray-200">
+<span class="text-xs font-bold text-primary uppercase tracking-wide">เสริมวาสนา +20</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="w-full py-16 px-4">
+<div class="max-w-[960px] mx-auto bg-[#102213] rounded-2xl p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+<!-- Decorative Thai elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10 flex-1">
+<h2 class="text-white text-2xl md:text-3xl font-bold mb-3">
+                        รอช้าอยู่ไย? เศรษฐีคนต่อไปอาจเป็นคุณ
+                    </h2>
+<p class="text-gray-300 text-sm md:text-base">
+                        นัดหมายตรวจสุขภาพวันนี้ เพื่อวางแผนชีวิตที่มั่งคั่งและยั่งยืน ที่ศูนย์อนามัยที่ 10 อุบลราชธานี
+                    </p>
+</div>
+<div class="relative z-10">
+<button class="whitespace-nowrap h-12 px-8 bg-primary text-[#102213] rounded-lg text-sm md:text-base font-bold shadow-[0_0_20px_rgba(19,236,55,0.4)] hover:shadow-[0_0_30px_rgba(19,236,55,0.6)] hover:scale-105 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">calendar_month</span>
+                        จองคิวตรวจดวงสุขภาพ
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-[#f0f4f1] py-8 w-full">
+<div class="max-w-[960px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-[#111812] text-sm font-medium">
+                © 2024 ศูนย์อนามัยที่ 10 อุบลราชธานี. สงวนลิขสิทธิ์.
+            </div>
+<div class="flex gap-6">
+<a class="text-gray-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</a>
+<a class="text-gray-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">smart_display</span>
+</a>
+<a class="text-gray-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">call</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

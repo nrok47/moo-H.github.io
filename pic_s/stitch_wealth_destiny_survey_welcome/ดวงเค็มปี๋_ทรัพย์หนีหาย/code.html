@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Muketing Fortune - ดวงเค็มปี๋ ทรัพย์หนีหาย</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans+Thai:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1c2631",
+                        "gold": "#FFD700"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans Thai", "sans-serif"],
+                        "body": ["Manrope", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for modern feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111418;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b4754;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #137fec;
+        }
+        
+        /* Subtle pattern overlay for the 'Thai/Mystic' feel */
+        .bg-pattern {
+            background-image: radial-gradient(#137fec 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-body overflow-x-hidden antialiased">
+<!-- Pattern Overlay -->
+<div class="fixed inset-0 pointer-events-none bg-pattern z-0"></div>
+<div class="relative flex min-h-screen flex-col z-10">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283039] bg-[#111418]/90 backdrop-blur-md px-4 py-3 lg:px-10">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 flex items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl">temple_buddhist</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Muketing Fortune</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">หน้าแรก</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">ทำนายดวง</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">บทความ</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">เกี่ยวกับเรา</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold leading-normal hover:bg-blue-600 transition-colors">
+<span class="truncate">เข้าสู่ระบบ</span>
+</button>
+</div>
+<div class="lg:hidden">
+<span class="material-symbols-outlined text-white cursor-pointer">menu</span>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex justify-center py-5 px-4 lg:px-40">
+<div class="flex flex-col max-w-[1200px] w-full gap-6">
+<!-- Progress Bar -->
+<div class="flex flex-col gap-3 p-4 bg-surface-dark rounded-xl border border-[#283039] shadow-lg">
+<div class="flex gap-6 justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">soup_kitchen</span>
+<p class="text-white text-base font-bold leading-normal">ด่านที่ 3: แดนเค็ม (The Salty Realm)</p>
+</div>
+<p class="text-[#9dabb9] text-sm font-bold leading-normal">60%</p>
+</div>
+<div class="rounded-full bg-[#3b4754] h-2 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-cyan-400 rounded-full transition-all duration-500" style="width: 60%;"></div>
+</div>
+</div>
+<!-- Header Section -->
+<div class="flex flex-col gap-3 px-4">
+<p class="text-white text-3xl lg:text-4xl font-black leading-tight tracking-[-0.033em] text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+                        ดวงเค็มปี๋ ทรัพย์หนีหาย
+                    </p>
+<p class="text-[#9dabb9] text-base lg:text-lg font-normal leading-relaxed max-w-3xl">
+                        เช็คหน่อยซิ... พฤติกรรมกินเค็มของคุณกำลังไล่เงินออกจากกระเป๋าอยู่หรือเปล่า? <br class="hidden lg:block"/> 
+                        ในทางโหราโภชนาการ "ความเค็ม" คือศัตรูตัวฉกาจของ "ความมั่งคั่ง" ระวังทรัพย์จางเพราะโซเดียมเกินพิกัด!
+                    </p>
+</div>
+<!-- Content Grid: Illustration & Form -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 mt-4">
+<!-- Left Column: Illustration (Visual Metaphor) -->
+<div class="lg:col-span-5 flex flex-col gap-6 order-2 lg:order-1">
+<div class="sticky top-24 flex flex-col gap-6">
+<!-- Hero Image Card -->
+<div class="relative overflow-hidden rounded-2xl border border-[#283039] bg-surface-dark shadow-2xl group">
+<div class="absolute inset-0 bg-gradient-to-t from-[#101922] via-transparent to-transparent z-10 opacity-80"></div>
+<div class="w-full bg-center bg-cover aspect-[4/5] lg:aspect-[3/4] transition-transform duration-700 group-hover:scale-105" data-alt="Thai mythical giant holding a torn bag with gold coins spilling into a dark void, digital art style" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCM2oevVsw3w3t0QYsBWQlnSNNkyPoOfC6a02APL9GVH8jGg2GGEojQJDUiHWwI5NU8NSarLWmVgt8AucNp-ktoqpU8vrlB7HtVaOM41w-4Fja336z-WzpAhceUMUp_UldwBTpZnnA99Q5PyAEYt8Fa3F1M-15I0QQwwRiBIT_5smnjy7vTr6Qm2SojUhHvHYL_6K02j3l4uIzEp6-He8GlTefTAM5a4Zv-zATR5XyQiZPCqJAX9i4jDS6i4v0srsukENHniRqBo4qa");'>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-gold">savings</span>
+<p class="text-gold text-sm font-bold uppercase tracking-wider">คำเตือนจากนรก</p>
+</div>
+<h3 class="text-white text-xl font-bold mb-2">ปีศาจดูดทรัพย์ (Salt Demon)</h3>
+<p class="text-gray-300 text-sm">โซเดียมที่เกินความจำเป็นจะดึงดูดโรคภัย และผลักไสโชคลาภให้ไกลห่าง ยิ่งเค็มมาก กระเป๋ายิ่งรั่ว!</p>
+</div>
+</div>
+<!-- Tip Card -->
+<div class="bg-[#1c2631]/50 border border-primary/20 rounded-xl p-5 backdrop-blur-sm">
+<div class="flex items-start gap-4">
+<div class="p-2 bg-primary/10 rounded-lg text-primary shrink-0">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div>
+<p class="text-white font-bold mb-1">เกร็ดความรู้ Muketing</p>
+<p class="text-[#9dabb9] text-sm">การลดเค็มเพียง 1 ช้อนชาต่อวัน อาจช่วยต่ออายุขัยและเพิ่มเงินเก็บในกระเป๋าได้ถึง 20% ในระยะยาว</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Questionnaire -->
+<div class="lg:col-span-7 order-1 lg:order-2">
+<form class="flex flex-col gap-8">
+<!-- Question 1 -->
+<div class="flex flex-col gap-4 bg-surface-dark p-6 lg:p-8 rounded-2xl border border-[#283039]">
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center size-8 rounded-full bg-primary text-white font-bold shrink-0">1</div>
+<div class="flex flex-col gap-1">
+<label class="text-white text-lg lg:text-xl font-bold leading-tight">
+                                            ปกติแล้ว คุณปรุงรสเพิ่ม (น้ำปลา/พริกน้ำปลา) ในอาหารจานเดียวหรือไม่?
+                                        </label>
+<p class="text-[#9dabb9] text-sm">รวมถึงการราดน้ำปลาพริกลงในข้าวผัด หรือกะเพราไข่ดาวด้วยนะ</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2" style="--radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');">
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q1" type="radio" value="1"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">ไม่เคยเลย</span>
+</label>
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q1" type="radio" value="2"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">นานๆ ครั้ง</span>
+</label>
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q1" type="radio" value="3"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">บางครั้ง</span>
+</label>
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q1" type="radio" value="4"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">บ่อยครั้ง</span>
+</label>
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q1" type="radio" value="5"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">เกือบทุกครั้ง</span>
+</label>
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q1" type="radio" value="6"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">เป็นประจำทุกครั้ง</span>
+</label>
+</div>
+</div>
+<!-- Question 2 -->
+<div class="flex flex-col gap-4 bg-surface-dark p-6 lg:p-8 rounded-2xl border border-[#283039]">
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center size-8 rounded-full bg-primary text-white font-bold shrink-0">2</div>
+<div class="flex flex-col gap-1">
+<label class="text-white text-lg lg:text-xl font-bold leading-tight">
+                                            คุณซดน้ำซุปจนหมดชามบ่อยแค่ไหน?
+                                        </label>
+<p class="text-[#9dabb9] text-sm">ไม่ว่าจะเป็นก๋วยเตี๋ยว แกงจืด หรือราเมง</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2" style="--radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');">
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q2" type="radio" value="1"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">ไม่เคยเลย</span>
+</label>
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q2" type="radio" value="2"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">นานๆ ครั้ง</span>
+</label>
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q2" type="radio" value="3"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">บางครั้ง</span>
+</label>
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q2" type="radio" value="4"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">บ่อยครั้ง</span>
+</label>
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q2" type="radio" value="5"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">เกือบทุกครั้ง</span>
+</label>
+<label class="cursor-pointer group relative flex items-center gap-3 rounded-xl border border-solid border-[#3b4754] bg-[#111418] p-4 hover:border-primary hover:bg-primary/5 transition-all">
+<input class="peer h-5 w-5 border-2 border-[#3b4754] bg-transparent text-transparent checked:border-white checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white" name="q2" type="radio" value="6"/>
+<span class="text-white text-sm font-medium group-hover:text-primary transition-colors">เป็นประจำทุกครั้ง</span>
+</label>
+</div>
+</div>
+<!-- CTA Button -->
+<div class="flex justify-end pt-4 pb-12">
+<button class="group flex min-w-[180px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-12 px-8 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-all shadow-[0_0_20px_rgba(19,127,236,0.3)] hover:shadow-[0_0_30px_rgba(19,127,236,0.5)]">
+<span class="truncate">ทำนายชะตาต่อ</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

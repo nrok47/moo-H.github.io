@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>เปิดดวงชะตาเศรษฐี: เช็กพลังโชคลาภผ่านพฤติกรรมการกิน</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@300;400;500;600;700&amp;family=Noto+Sans+Thai:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7311d4",
+                        "primary-hover": "#5b0da8",
+                        "gold": "#D4AF37",
+                        "gold-light": "#F9E79F",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                        "card-dark": "#2a1f36",
+                        "input-bg": "#211c27",
+                        "input-border": "#473b54",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif Thai", "serif"],
+                        "sans": ["Noto Sans Thai", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        'thai-pattern': "url('https://www.transparenttextures.com/patterns/black-scales.png')", // Conceptual pattern texture
+                        'mystic-gradient': "radial-gradient(circle at center, rgba(115, 17, 212, 0.25) 0%, rgba(25, 16, 34, 0) 70%)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Noto Sans Thai", sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: "Noto Serif Thai", serif;
+        }
+        
+        /* Custom glowing orb animation */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 20px rgba(115, 17, 212, 0.4); transform: scale(1); }
+            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6); transform: scale(1.02); }
+            100% { box-shadow: 0 0 20px rgba(115, 17, 212, 0.4); transform: scale(1); }
+        }
+        
+        .orb-glow {
+            animation: pulse-glow 4s infinite ease-in-out;
+        }
+
+        /* Lai Thai border decoration concept using CSS borders */
+        .corner-decoration {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 2px solid #D4AF37;
+            opacity: 0.6;
+        }
+        .corner-tl { top: 20px; left: 20px; border-right: none; border-bottom: none; border-top-left-radius: 12px; }
+        .corner-tr { top: 20px; right: 20px; border-left: none; border-bottom: none; border-top-right-radius: 12px; }
+        .corner-bl { bottom: 20px; left: 20px; border-right: none; border-top: none; border-bottom-left-radius: 12px; }
+        .corner-br { bottom: 20px; right: 20px; border-left: none; border-top: none; border-bottom-right-radius: 12px; }
+
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col overflow-x-hidden relative">
+<!-- Navbar -->
+<header class="sticky top-0 z-50 w-full border-b border-[#302839] bg-[#141118]/80 backdrop-blur-md">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-[32px] text-gold">spa</span>
+</div>
+<h2 class="text-white text-xl font-display font-bold tracking-tight">มูเตลู อีทติ้ง</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-gray-300 hover:text-gold transition-colors text-sm font-medium" href="#">หน้าแรก</a>
+<a class="text-gray-300 hover:text-gold transition-colors text-sm font-medium" href="#">ทำนายดวง</a>
+<a class="text-gray-300 hover:text-gold transition-colors text-sm font-medium" href="#">บทความมูเตลู</a>
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary hover:bg-primary-hover text-white text-sm font-bold transition-all shadow-[0_0_15px_rgba(115,17,212,0.5)]">
+<span class="truncate">เข้าสู่ระบบ</span>
+</button>
+</div>
+<div class="md:hidden">
+<button class="text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col relative">
+<!-- Background Elements -->
+<div class="absolute inset-0 bg-thai-pattern opacity-10 pointer-events-none z-0"></div>
+<div class="absolute top-0 left-0 w-full h-[600px] bg-mystic-gradient pointer-events-none z-0"></div>
+<!-- Main Content Container -->
+<div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 grow">
+<!-- Hero Text Section -->
+<div class="flex-1 text-center lg:text-left space-y-6 max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-medium uppercase tracking-wider mb-2">
+<span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                    ศาสตร์แห่งโภชนาการและดวงชะตา
+                </div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-black text-white leading-tight drop-shadow-xl">
+<span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-gold-light to-white">ดวงเศรษฐี</span> 
+                    หรือ 
+                    <span class="text-red-400">ดวงตก</span>
+</h1>
+<h2 class="text-2xl md:text-3xl font-display font-bold text-gray-200">
+                    เช็กพลังโชคลาภผ่านพฤติกรรมการกิน
+                </h2>
+<p class="text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    เมื่อพฤติกรรมของคุณกำหนดชะตาชีวิต ทั้งในนรกและสวรรค์... เปิดคำทำนายผ่านรสชาติที่คุณเลือก พร้อมรับยันต์สุขภาพเตือนใจ
+                </p>
+<div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<div class="flex items-center gap-4 text-sm text-gray-400">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gold text-[20px]">verified</span>
+<span>แม่นยำ 98%</span>
+</div>
+<div class="w-1 h-1 bg-gray-600 rounded-full"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[20px]">groups</span>
+<span>ผู้ใช้งาน 10k+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Form Card (The Scripture Tablet) -->
+<div class="flex-1 w-full max-w-[480px]">
+<div class="relative bg-card-dark/90 backdrop-blur-sm border border-[#473b54] p-8 rounded-2xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] group overflow-hidden">
+<!-- Decorative Corners -->
+<div class="corner-decoration corner-tl"></div>
+<div class="corner-decoration corner-tr"></div>
+<div class="corner-decoration corner-bl"></div>
+<div class="corner-decoration corner-br"></div>
+<!-- Glowing Orb Visual -->
+<div class="flex justify-center -mt-16 mb-6 relative z-10">
+<div class="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-black border-2 border-gold/50 flex items-center justify-center orb-glow relative overflow-hidden">
+<img class="opacity-60 mix-blend-overlay absolute inset-0 w-full h-full object-cover" data-alt="Abstract mystical smoke or fluid swirling inside a crystal ball" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9jNNyenbrPdvZ4jxGF0JUlSqCBJUafm3b7iLPzkv_a3HFIrmNUo8avLOhioFJlj87uHeIZNIQrEJNMa_i7D3KzPOAYukahI4Ievevgveyh8NLDr9ewZyb1jGdK_ZIHYxlJjfCuUOTZM2il8G4jNOVvkmYi9YNV_bg_MZWJU17m5bKuIhV1p4sa9T-O04avR8bMB0i-ysPiijTxF6dIBmebdN-RIgwoTW1auez-4x0X20MA4EBQ5Bvri390rak49TIzy2WaATejYbB"/>
+<span class="material-symbols-outlined text-4xl text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] z-10">visibility</span>
+</div>
+</div>
+<div class="text-center mb-8">
+<h3 class="text-white text-xl font-display font-bold">ข้อมูลเพื่อเปิดดวงชะตา</h3>
+<p class="text-gray-400 text-sm mt-1">กรอกข้อมูลให้ครบถ้วนเพื่อให้เทพยดาประทานคำทำนาย</p>
+</div>
+<form class="space-y-5 relative z-10">
+<!-- Date of Birth -->
+<div class="space-y-2">
+<label class="block text-gold text-sm font-medium font-display">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                                    วัน/เดือน/ปีเกิด
+                                </span>
+</label>
+<div class="relative">
+<input class="w-full bg-input-bg border border-input-border text-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder-gray-500 font-sans" required="" type="date"/>
+</div>
+</div>
+<!-- Weight & Height Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-gold text-sm font-medium font-display">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">monitor_weight</span>
+                                        น้ำหนัก (กก.)
+                                    </span>
+</label>
+<input class="w-full bg-input-bg border border-input-border text-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder-gray-500 font-sans" placeholder="เช่น 60" required="" type="number"/>
+</div>
+<div class="space-y-2">
+<label class="block text-gold text-sm font-medium font-display">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">height</span>
+                                        ส่วนสูง (ซม.)
+                                    </span>
+</label>
+<input class="w-full bg-input-bg border border-input-border text-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder-gray-500 font-sans" placeholder="เช่น 170" required="" type="number"/>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full group/btn relative mt-4 h-14 overflow-hidden rounded-xl bg-gradient-to-r from-[#5b0da8] to-[#7311d4] p-[1px] focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-gray-900" type="submit">
+<span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500"></span>
+<span class="relative flex h-full w-full items-center justify-center rounded-xl bg-primary group-hover/btn:bg-primary-hover transition-colors px-6 py-1 text-white font-display font-bold text-lg tracking-wide">
+<span class="mr-2 material-symbols-outlined">auto_awesome</span>
+                                เริ่มทำนายชะตา
+                            </span>
+</button>
+</form>
+<div class="mt-6 text-center">
+<p class="text-[10px] text-gray-500">
+                            *ข้อมูลของท่านจะถูกเก็บเป็นความลับและใช้เพื่อการทำนายและประเมินสุขภาพเท่านั้น
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Decoration -->
+<div class="w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none absolute bottom-0"></div>
+</main>
+</body></html>

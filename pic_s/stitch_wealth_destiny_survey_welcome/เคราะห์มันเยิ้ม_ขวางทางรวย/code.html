@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Muketing Health - Greasy Karma</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Manrope & Noto Sans Thai -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans+Thai:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                        "surface-dark": "#1a2c1e",
+                        "border-dark": "#28392b",
+                        "text-dim": "#9db9a1"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans Thai", "sans-serif"],
+                        "body": ["Manrope", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', 'Noto Sans Thai', sans-serif;
+        }
+        /* Custom scrollbar for horizontal scrolling if needed */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-white flex flex-col">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-border-dark bg-background-dark/80 backdrop-blur-md px-4 py-3 md:px-10">
+<div class="mx-auto flex max-w-[1200px] items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-4 text-white">
+<div class="flex size-8 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-xl">temple_buddhist</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Muketing Health</h2>
+</div>
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">หน้าแรก</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">ทำนายดวง</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">สะสมแต้มบุญ</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden md:block text-right">
+<p class="text-xs text-text-dim">แต้มบุญคงเหลือ</p>
+<p class="text-sm font-bold text-primary">1,290 แต้ม</p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/30" data-alt="User profile avatar with a spiritual aura" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrnigMPHPQulQi09rPxSPegP4KOQw24PnC-SGp4JFhrgCFjCoW582G0Ap2a-k0CEUMQWew5qU4mDZ-Yw2GqP0ISyD48BGtmsL-M-tNGcB551lepVXW1F-URgV1FbZjonRqGCSXqA9Aqng-bTXfIcfkYYtosFPoXuuteQ0Fhp7vYDSlWHX7mhjgvxwxdf1EcA7KmR87sbAiZ9DFiVfDUGTpxzF8aQajt68sU2w4oC6ESN3zuQE3DGEUPl2Y6coz3HhFxN1GEhgnis_e");'></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 w-full flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-[960px] flex flex-col gap-8">
+<!-- Progress Bar Section -->
+<div class="w-full rounded-2xl bg-surface-dark border border-border-dark p-6 shadow-lg">
+<div class="flex flex-col gap-3">
+<div class="flex gap-6 justify-between items-end">
+<div>
+<p class="text-text-dim text-xs font-medium uppercase tracking-wider mb-1">สถานะดวงชตา</p>
+<p class="text-white text-base font-bold leading-normal flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">local_fire_department</span>
+                                ด่านที่ 2: วังวนน้ำมัน (Oil Vortex)
+                            </p>
+</div>
+<p class="text-primary text-xl font-bold leading-normal">33%</p>
+</div>
+<div class="rounded-full bg-border-dark h-3 w-full overflow-hidden relative">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-black/20 z-10"></div>
+<div class="h-full rounded-full bg-primary shadow-[0_0_10px_rgba(19,236,55,0.6)] transition-all duration-500 ease-out relative" style="width: 33%;">
+<div class="absolute right-0 top-0 h-full w-2 bg-white/50 animate-pulse"></div>
+</div>
+</div>
+<div class="flex justify-between items-center text-xs">
+<p class="text-text-dim font-normal">ธูปดอกที่ 2 กำลังมอดไหม้...</p>
+<p class="text-text-dim font-normal">เหลืออีก 4 ด่านเพื่อหลุดพ้น</p>
+</div>
+</div>
+</div>
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-4">
+<div class="flex flex-col gap-2 max-w-2xl">
+<h1 class="text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em] text-transparent bg-clip-text bg-gradient-to-br from-white to-text-dim">
+                        เคราะห์มันเยิ้ม ขวางทางรวย
+                    </h1>
+<p class="text-text-dim text-lg font-normal leading-relaxed">
+                        เช็คกรรมเก่า... คุณสะสมไขมันไว้ขัดลาภมากแค่ไหน? ยิ่งมัน ยิ่งลื่น(ล้ม)
+                    </p>
+</div>
+<div class="hidden md:block">
+<div class="size-20 rounded-full bg-surface-dark border border-border-dark flex items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-primary/20 transition-all"></div>
+<span class="material-symbols-outlined text-4xl text-primary animate-bounce">water_drop</span>
+</div>
+</div>
+</div>
+<!-- Question 1 -->
+<div class="flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark/50 p-6 md:p-8 backdrop-blur-sm transition-all hover:border-primary/30">
+<div class="flex items-start gap-4">
+<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-black font-bold">1</div>
+<h3 class="text-xl md:text-2xl font-bold text-white leading-tight">
+                        ปกติคุณทาน <span class="text-primary">ของทอด</span> หรือของมัน บ่อยแค่ไหน?
+                    </h3>
+</div>
+<div class="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+<!-- Option 1 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question1" type="radio" value="1"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">spa</span>
+<span class="text-sm font-medium text-white">ไม่เคยเลย<br/><span class="text-xs text-text-dim">(บริสุทธิ์)</span></span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+<!-- Option 2 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question1" type="radio" value="2"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">history</span>
+<span class="text-sm font-medium text-white">นานๆ ครั้ง</span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+<!-- Option 3 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question1" type="radio" value="3"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">restaurant</span>
+<span class="text-sm font-medium text-white">บางครั้ง</span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+<!-- Option 4 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question1" type="radio" value="4"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">fastfood</span>
+<span class="text-sm font-medium text-white">บ่อย</span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+<!-- Option 5 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question1" type="radio" value="5"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">lunch_dining</span>
+<span class="text-sm font-medium text-white">เป็นประจำ</span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+<!-- Option 6 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question1" type="radio" value="6"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">sentiment_very_dissatisfied</span>
+<span class="text-sm font-medium text-white">ทุกมื้อ<br/><span class="text-xs text-red-400">(กรรมหนัก)</span></span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Question 2 -->
+<div class="flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark/50 p-6 md:p-8 backdrop-blur-sm transition-all hover:border-primary/30">
+<div class="flex items-start gap-4">
+<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-black font-bold">2</div>
+<h3 class="text-xl md:text-2xl font-bold text-white leading-tight">
+                        คุณเติม <span class="text-primary">เครื่องปรุงที่มีน้ำมัน</span> (เช่น กระเทียมเจียว, พริกเผา) มากน้อยเพียงใด?
+                    </h3>
+</div>
+<div class="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+<!-- Option 1 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question2" type="radio" value="1"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">do_not_touch</span>
+<span class="text-sm font-medium text-white">ไม่ใส่เลย<br/><span class="text-xs text-text-dim">(ลอยตัว)</span></span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+<!-- Option 2 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question2" type="radio" value="2"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">grain</span>
+<span class="text-sm font-medium text-white">นิดหน่อย</span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+<!-- Option 3 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question2" type="radio" value="3"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">soup_kitchen</span>
+<span class="text-sm font-medium text-white">พอประมาณ</span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+<!-- Option 4 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question2" type="radio" value="4"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">science</span>
+<span class="text-sm font-medium text-white">เยอะกว่าเพื่อน</span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+<!-- Option 5 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question2" type="radio" value="5"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">volcano</span>
+<span class="text-sm font-medium text-white">ใส่จนพูน</span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+<!-- Option 6 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="question2" type="radio" value="6"/>
+<div class="flex h-full flex-col items-center justify-center gap-2 rounded-xl border border-border-dark bg-background-dark p-4 text-center transition-all hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:shadow-[0_0_15px_rgba(19,236,55,0.15)]">
+<span class="material-symbols-outlined text-text-dim peer-checked:text-primary group-hover:text-white text-3xl">tsunami</span>
+<span class="text-sm font-medium text-white">ถมจนมิด<br/><span class="text-xs text-red-400">(เจ้ากรรมนายเวร)</span></span>
+</div>
+<div class="absolute -top-2 -right-2 hidden peer-checked:block">
+<span class="material-symbols-outlined text-primary bg-background-dark rounded-full">check_circle</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Footer Warning & Actions -->
+<div class="flex flex-col items-center gap-6 mt-4">
+<div class="flex items-center gap-3 rounded-lg bg-red-900/20 px-4 py-3 border border-red-900/50">
+<span class="material-symbols-outlined text-red-400">warning</span>
+<p class="text-sm font-medium text-red-200">ระวัง! ไขมันที่กิน คือมารผจญขวางทางรวย... เลือกตามความจริง มิฉะนั้นคำทำนายจะคลาดเคลื่อน</p>
+</div>
+<div class="flex w-full items-center justify-between pt-4">
+<button class="flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-bold text-text-dim hover:bg-surface-dark hover:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+                        ย้อนกลับ
+                    </button>
+<button class="flex items-center gap-3 rounded-xl bg-primary px-8 py-3 text-base font-bold text-background-dark shadow-[0_0_20px_rgba(19,236,55,0.4)] hover:shadow-[0_0_30px_rgba(19,236,55,0.6)] hover:bg-white transition-all transform hover:-translate-y-1">
+<span>ขจัดไขมัน</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="w-full border-t border-border-dark bg-background-dark py-6 text-center">
+<p class="text-xs text-text-dim">© 2024 Muketing Health. สงวนลิขสิทธิ์ความเฮง</p>
+</footer>
+</body></html>
