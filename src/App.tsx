@@ -3,6 +3,12 @@ import './App.css'
 
 type QuestionId = 'sweet_spending' | 'stress_eating' | 'late_night' | 'exercise' | 'sleep' | 'palm_reading' | 'bad_signs'
 
+type ShareOptions = {
+  title: string
+  text: string
+  url: string
+}
+
 type Question = {
   id: QuestionId
   prompt: string
@@ -448,6 +454,68 @@ const App = () => {
     setShowSummary(false)
   }
 
+  // Share Functions
+  const getShareData = (): ShareOptions => {
+    const url = window.location.href
+    const title = 'เปิดดวงชะตาเศรษฐี - มูเตลู อีทติ้ง'
+    const text = `ฉันได้ ${destinyScore.level} (${destinyScore.score} คะแนน) 🎯\nมาลองเปิดดวงชะตาของคุณกันเถอะ!`
+    return { title, text, url }
+  }
+
+  const handleNativeShare = async () => {
+    const shareData = getShareData()
+    
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData)
+      } catch (err) {
+        if ((err as Error).name !== 'AbortError') {
+          console.error('Error sharing:', err)
+        }
+      }
+    } else {
+      // Fallback to copy link
+      handleCopyLink()
+    }
+  }
+
+  const handleCopyLink = async () => {
+    const url = window.location.href
+    try {
+      await navigator.clipboard.writeText(url)
+      alert('คัดลอกลิงก์แล้ว! 📋')
+    } catch (err) {
+      console.error('Failed to copy:', err)
+      // Fallback for older browsers
+      const textarea = document.createElement('textarea')
+      textarea.value = url
+      document.body.appendChild(textarea)
+      textarea.select()
+      document.execCommand('copy')
+      document.body.removeChild(textarea)
+      alert('คัดลอกลิงก์แล้ว! 📋')
+    }
+  }
+
+  const handleShareFacebook = () => {
+    const url = encodeURIComponent(window.location.href)
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400')
+  }
+
+  const handleShareTwitter = () => {
+    const shareData = getShareData()
+    const url = encodeURIComponent(shareData.url)
+    const text = encodeURIComponent(shareData.text)
+    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400')
+  }
+
+  const handleShareLine = () => {
+    const shareData = getShareData()
+    const url = encodeURIComponent(shareData.url)
+    const text = encodeURIComponent(shareData.text)
+    window.open(`https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`, '_blank', 'width=600,height=400')
+  }
+
   // If all questions answered and showSummary is true, show summary page
   if (showSummary && completedCount === QUESTIONS.length) {
     return (
@@ -545,6 +613,33 @@ const App = () => {
                 <span className="cta-icon">📖</span>
                 ศึกษาวิธีการเปลี่ยนแปลง
               </button>
+            </div>
+
+            {/* Share Section */}
+            <div className="share-section">
+              <h3 className="share-title">แชร์ผลลัพธ์ของคุณ</h3>
+              <div className="share-buttons">
+                <button className="share-btn share-native" onClick={handleNativeShare} title="แชร์">
+                  <span className="material-symbols-outlined">share</span>
+                  <span>แชร์</span>
+                </button>
+                <button className="share-btn share-copy" onClick={handleCopyLink} title="คัดลอกลิงก์">
+                  <span className="material-symbols-outlined">link</span>
+                  <span>คัดลอก</span>
+                </button>
+                <button className="share-btn share-facebook" onClick={handleShareFacebook} title="แชร์บน Facebook">
+                  <span className="share-icon">f</span>
+                  <span>Facebook</span>
+                </button>
+                <button className="share-btn share-twitter" onClick={handleShareTwitter} title="แชร์บน X (Twitter)">
+                  <span className="share-icon">𝕏</span>
+                  <span>Twitter</span>
+                </button>
+                <button className="share-btn share-line" onClick={handleShareLine} title="แชร์บน LINE">
+                  <span className="share-icon">L</span>
+                  <span>LINE</span>
+                </button>
+              </div>
             </div>
 
             {/* Final Message */}
